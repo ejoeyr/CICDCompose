@@ -29,7 +29,7 @@ class MainActivity : ComponentActivity() {
         installSplashScreen()
 
         AppCenter.start(
-            application, "136e0d57-eb44-4f55-8bca-cb01bee0482d",
+            application, "5aaec406-e8ab-484d-9b3d-2e5b98ae3893",
             Analytics::class.java, Crashes::class.java
         )
 
@@ -50,7 +50,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting(name: String) {
 
-    val items = listOf<String>("1","2","3")
+    val items = listOf<String>("1","2","3","4")
     LazyColumn{
         items(items.size){index ->
             Column (modifier = Modifier.padding(bottom= 8.dp)){
