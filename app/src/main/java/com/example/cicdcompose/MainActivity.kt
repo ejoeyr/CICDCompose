@@ -51,11 +51,10 @@ class MainActivity : ComponentActivity() {
 fun Greeting(name: String) {
 
     val items = listOf<String>("1","2","3")
-    
     LazyColumn{
         items(items.size){index ->
             Column (modifier = Modifier.padding(bottom= 8.dp)){
-                Button(onClick = { throw  Exception("hello!") }) {
+                Button(onClick = { if(index == 1) Analytics.trackEvent("pressed_1,") }) {
                     Text(text = "Hello ${items[index]}")
                 }
             }
